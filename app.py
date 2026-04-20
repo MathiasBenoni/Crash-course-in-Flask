@@ -2,11 +2,15 @@ from flask import *
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET"])
-def index():
-    return "<p> Hello world! </p>"
+@app.route("/")
+def test():
+    return render_template("index.html")
 
+
+@app.route("/login", methods=["POST", "GET"])
+def login():
+    return "Nice"
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
