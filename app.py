@@ -9,8 +9,15 @@ def test():
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
-    return "Nice"
 
+    username = request.form.get("username")
+    if username == "admin":
+        return "Nice"
+    else:
+        print(f"Received username: '{username}'")
+        print(request.form)
+        return "Not Nice"
+    
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

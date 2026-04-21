@@ -2,6 +2,12 @@
 
 This is a crash-course of python – Flask
 
+If something failes, write this line in your terminal
+
+```
+lsof -i :5000
+```
+
 ## Install dependencies
 
 ### Install Flask
@@ -55,7 +61,7 @@ app = Flask(__name__)
 def index():
     return "<p> Hello world! </p>"
 
-@app.rout("/test")
+@app.route("/test")
 def test():
     return "Test"
 
