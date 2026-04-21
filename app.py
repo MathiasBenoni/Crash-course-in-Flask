@@ -14,8 +14,7 @@ def login():
     if username == "admin":
         return "Nice"
     else:
-        print(f"Received username: '{username}'")
-        print(request.form)
+        print(username)
         return "Not Nice"
     
 
